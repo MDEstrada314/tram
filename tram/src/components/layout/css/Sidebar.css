@@ -1,20 +1,24 @@
-/* IZQUIERDO */
+:root {
+    --menu-button-size: 60px; /* Tamaño base de los botones */
+}
 
 .Sidebar {
-
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 20% 60% 20%;
     height: 100%;
-    
-    
 }
 
 .menu {
-    
     border-radius: 12px;
     grid-row: 1;
     background-color: var(--bg);
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .canciones {
@@ -22,12 +26,74 @@
     background-color: var(--bg);
     border-radius: 12px;
     margin: 8px 0;
-    
 }
 
 .espacios {
-    
     grid-row: 3;
     background-color: var(--bg);
     border-radius: 12px;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Botón del menú con tamaño dinámico */
+.menu-button {
+    width: var(--menu-button-size);
+    height: var(--menu-button-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border-radius: 50%;
+    border: 2px solid aliceblue;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* 📱 Pantallas pequeñas (menos de 600px de ancho) */
+@media (max-width: 600px) {
+    .menu-button {
+        width: 1vw;  
+        height: 1vw;
+    }
+}
+
+/* 💻 Pantallas medianas (entre 600px y 1024px de ancho) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .menu-button {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+
+/* 🖥️ Pantallas grandes (más de 1024px de ancho) */
+@media (min-width: 1024px) {
+    .menu-button {
+        width: 2.8vw;
+        height: 2.8vw;
+       
+    }
+}
+
+/* 🖥️ Pantallas grandes (más de 1080px de ancho) */
+@media (min-width: 1400px) {
+    .menu-button {
+        width: 3.1vw;
+        height: 3.1vw;
+       
+    }
+}
+/* ---------------------------------------------------------- */
+/* Efecto al pasar el mouse */
+.menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Ajustar tamaño del ícono dentro del botón */
+.menu-button img {
+    width: 45%;
+    height: 45%;
+    filter: invert(1); /* Convierte el SVG negro a blanco */
 }
