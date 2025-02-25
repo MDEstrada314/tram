@@ -1,0 +1,25 @@
+.Workspace {
+    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  50% 50;
+    height: 100%;
+    gap: 8px;
+   
+    
+}
+
+.letras {
+    
+    border-radius: 12px;
+    grid-row: 1;
+    background-color: var(--bg);
+}
+
+.fondos {
+    grid-row: 2;
+    background-color: var(--bg);
+    border-radius: 12px;
+    
+}
+

@@ -1,0 +1,72 @@
+:root {
+  --bg: rgba(28, 28, 28, 1);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+
+/* Contenedor principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 98vw;
+  height: 100vh;
+  padding-right: 10px;
+
+  
+}
+
+
+/* Header */
+.header { 
+  height: 10%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Layout principal */
+.main-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  gap: 8px;
+  padding-bottom: 15px;
+}
+
+/* Panel izquierdo */
+.sidebar {
+  grid-column: 1;
+  border-radius: 8px;
+}
+
+/* Zona central */
+.workspace {
+  grid-column: 2;
+  border-radius: 8px;
+}
+
+/* Panel derecho */
+.preview {
+  grid-column: 3;
+  border-radius: 8px;
+}

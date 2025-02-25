@@ -1,0 +1,33 @@
+/* IZQUIERDO */
+
+.Sidebar {
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20%;
+    height: 100%;
+    
+    
+}
+
+.menu {
+    
+    border-radius: 12px;
+    grid-row: 1;
+    background-color: var(--bg);
+}
+
+.canciones {
+    grid-row: 2;
+    background-color: var(--bg);
+    border-radius: 12px;
+    margin: 8px 0;
+    
+}
+
+.espacios {
+    
+    grid-row: 3;
+    background-color: var(--bg);
+    border-radius: 12px;
+}
