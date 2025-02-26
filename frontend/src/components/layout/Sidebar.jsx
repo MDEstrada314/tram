@@ -10,24 +10,24 @@ import settingsIcon from "../../assets/icons/fi-rs-chart-network.svg";
 
 
 const menuItems = [
-  { name: "Inicio", icon: homeIcon },
-  { name: "Canciones", icon: musicIcon },
-  { name: "Editar", icon: editMusic },
-  { name: "Biblia", icon: BibleIcon },
-  { name: "Rayar", icon: formaIcon },
-  { name: "Temas", icon: TemaIcon },
-  { name: "Comparar", icon: compares },
-  { name: "Configuración", icon: settingsIcon },
+  { name: "Inicio", icon: homeIcon, view: "Workspace" },
+  { name: "Canciones", icon: musicIcon, view: "songs" },
+  { name: "Editar", icon: editMusic, view: "edit-songs" },
+  { name: "Biblia", icon: BibleIcon, view: "bible" },
+  { name: "Rayar", icon: formaIcon, view: "highlight" },
+  { name: "Temas", icon: TemaIcon, view: "themes" },
+  { name: "Comparar", icon: compares, view: "compare" },
+  { name: "Configuración", icon: settingsIcon, view: "settings" },
   
 ];
 
 
-function Sidebar() {
+function Sidebar({ setActiveView }) {
   return (
     <div className="Sidebar">
       <div className="menu">
         {menuItems.map((item, index) => (
-          <button key={index} className="menu-button">
+          <button key={index} className="menu-button" onClick={() => setActiveView(item.view)}>
             <img src={item.icon} alt={item.name} />
           </button>
         ))}

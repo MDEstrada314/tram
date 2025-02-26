@@ -5,7 +5,7 @@ function Workspace() {
     <div className="Workspace">
       
       <div className="letras">
-        menu
+        letras
       </div>
       <div className="fondos">
         canciones
